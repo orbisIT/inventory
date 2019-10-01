@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="asiainspModelStoreContainer" CdmEntityContainer="asiainspEntities">
+    <EntitySetMapping Name="Additionals">
+      <EntityTypeMapping TypeName="asiainspModel.Additional">
+        <MappingFragment StoreEntitySet="Additionals">
+          <ScalarProperty Name="AdditionalID" ColumnName="AdditionalID" />
+          <ScalarProperty Name="AdditionalName" ColumnName="AdditionalName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="asiainspModel.Article">
+        <MappingFragment StoreEntitySet="Articles">
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="PriceSales" ColumnName="PriceSales" />
+          <ScalarProperty Name="PriceSupplier" ColumnName="PriceSupplier" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="FinishingID" ColumnName="FinishingID" />
+          <ScalarProperty Name="AdditionalID" ColumnName="AdditionalID" />
+          <ScalarProperty Name="ShapeID" ColumnName="ShapeID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SizeL" ColumnName="SizeL" />
+          <ScalarProperty Name="SizeW" ColumnName="SizeW" />
+          <ScalarProperty Name="SizeD" ColumnName="SizeD" />
+          <ScalarProperty Name="BoxSizeL" ColumnName="BoxSizeL" />
+          <ScalarProperty Name="BoxSizeW" ColumnName="BoxSizeW" />
+          <ScalarProperty Name="BoxSizeD" ColumnName="BoxSizeD" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="asiainspModel.Customer">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Finishings">
+      <EntityTypeMapping TypeName="asiainspModel.Finishing">
+        <MappingFragment StoreEntitySet="Finishings">
+          <ScalarProperty Name="FinishingID" ColumnName="FinishingID" />
+          <ScalarProperty Name="FinishingName" ColumnName="FinishingName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materials">
+      <EntityTypeMapping TypeName="asiainspModel.Material">
+        <MappingFragment StoreEntitySet="Materials">
+          <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shapes">
+      <EntityTypeMapping TypeName="asiainspModel.Shape">
+        <MappingFragment StoreEntitySet="Shapes">
+          <ScalarProperty Name="ShapeID" ColumnName="ShapeID" />
+          <ScalarProperty Name="ShapeName" ColumnName="ShapeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sizes">
+      <EntityTypeMapping TypeName="asiainspModel.Size">
+        <MappingFragment StoreEntitySet="Sizes">
+          <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+          <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestArticles">
+      <EntityTypeMapping TypeName="asiainspModel.TestArticle">
+        <MappingFragment StoreEntitySet="TestArticle">
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="ArticleName" ColumnName="ArticleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Types">
+      <EntityTypeMapping TypeName="asiainspModel.Type">
+        <MappingFragment StoreEntitySet="Types">
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="asiainspModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_articles">
+      <EntityTypeMapping TypeName="asiainspModel.vw_articles">
+        <MappingFragment StoreEntitySet="vw_articles">
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="PriceSupplier" ColumnName="PriceSupplier" />
+          <ScalarProperty Name="PriceSales" ColumnName="PriceSales" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SizeL" ColumnName="SizeL" />
+          <ScalarProperty Name="SizeW" ColumnName="SizeW" />
+          <ScalarProperty Name="SizeD" ColumnName="SizeD" />
+          <ScalarProperty Name="BoxSizeL" ColumnName="BoxSizeL" />
+          <ScalarProperty Name="BoxSizeW" ColumnName="BoxSizeW" />
+          <ScalarProperty Name="BoxSizeD" ColumnName="BoxSizeD" />
+          <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+          <ScalarProperty Name="NetWeight" ColumnName="NetWeight" />
+          <ScalarProperty Name="ImgUrl" ColumnName="ImgUrl" />
+          <ScalarProperty Name="QRCode" ColumnName="QRCode" />
+          <ScalarProperty Name="FinishingName" ColumnName="FinishingName" />
+          <ScalarProperty Name="ShapeName" ColumnName="ShapeName" />
+          <ScalarProperty Name="AdditionalName" ColumnName="AdditionalName" />
+          <ScalarProperty Name="MaterialName" ColumnName="MaterialName" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_create_testArticle" FunctionName="asiainspModel.Store.sp_create_testArticle" />
+    <FunctionImportMapping FunctionImportName="sp_insert_articles" FunctionName="asiainspModel.Store.sp_insert_articles" />
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="asiainspModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="asiainspModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="DistanceFromFactory" ColumnName="DistanceFromFactory" />
+          <ScalarProperty Name="PersonInCharge" ColumnName="PersonInCharge" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="NoKTP" ColumnName="NoKTP" />
+          <ScalarProperty Name="Significant" ColumnName="Significant" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="NameSupplier" ColumnName="NameSupplier" />
+          <ScalarProperty Name="SupplierCode" ColumnName="SupplierCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

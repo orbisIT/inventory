@@ -1,0 +1,24 @@
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory App.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory_App.EntryArticle.resources
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory_App.EntryCustomer.resources
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory_App.EntrySupplier.resources
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory_App.Homepage.resources
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory_App.Login.resources
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory_App.Properties.Resources.resources
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory App.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory App.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\Inventory App.exe.config
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\Inventory App.exe
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\Inventory App.pdb
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\Dapper.dll
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\MetroFramework.Design.dll
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\MetroFramework.dll
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\Dapper.xml
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory App.csproj.CopyComplete
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory App.exe
+C:\Users\user\Desktop\Asia Inspirasi\Inventory App\obj\Debug\Inventory App.pdb

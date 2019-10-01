@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="asiainspModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Additional">
+    <Key>
+      <PropertyRef Name="AdditionalID" />
+    </Key>
+    <Property Name="AdditionalID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AdditionalName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK_ArtAdditional" FromRole="Additionals" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TypeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SizeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FinishingID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AdditionalID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShapeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SizeL" Type="Double" />
+    <Property Name="SizeW" Type="Double" />
+    <Property Name="SizeD" Type="Double" />
+    <Property Name="BoxSizeL" Type="Double" />
+    <Property Name="BoxSizeW" Type="Double" />
+    <Property Name="BoxSizeD" Type="Double" />
+    <Property Name="GrossWeight" Type="Double" />
+    <Property Name="NetWeight" Type="Double" />
+    <Property Name="ImgUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QRCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Additional" Relationship="Self.FK_ArtAdditional" FromRole="Articles" ToRole="Additionals" />
+    <NavigationProperty Name="Finishing" Relationship="Self.FK_ArtFinishing" FromRole="Articles" ToRole="Finishings" />
+    <NavigationProperty Name="Material" Relationship="Self.FK_ArtMaterial" FromRole="Articles" ToRole="Materials" />
+    <NavigationProperty Name="Shape" Relationship="Self.FK_ArtShape" FromRole="Articles" ToRole="Shapes" />
+    <NavigationProperty Name="Size" Relationship="Self.FK_ArtSize" FromRole="Articles" ToRole="Sizes" />
+    <NavigationProperty Name="Type" Relationship="Self.FK_ArtType" FromRole="Articles" ToRole="Types" />
+    <Property Name="PriceSupplier" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PriceSales" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CompanyCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Finishing">
+    <Key>
+      <PropertyRef Name="FinishingID" />
+    </Key>
+    <Property Name="FinishingID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FinishingName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK_ArtFinishing" FromRole="Finishings" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="MaterialID" />
+    </Key>
+    <Property Name="MaterialID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaterialName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK_ArtMaterial" FromRole="Materials" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="Shape">
+    <Key>
+      <PropertyRef Name="ShapeID" />
+    </Key>
+    <Property Name="ShapeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ShapeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK_ArtShape" FromRole="Shapes" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="Size">
+    <Key>
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="SizeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SizeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK_ArtSize" FromRole="Sizes" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="TestArticle">
+    <Key>
+      <PropertyRef Name="ArticleID" />
+    </Key>
+    <Property Name="ArticleID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ArticleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Type">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Articles" Relationship="Self.FK_ArtType" FromRole="Types" ToRole="Articles" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="vw_articles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SupplierCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SizeL" Type="Double" />
+    <Property Name="SizeW" Type="Double" />
+    <Property Name="SizeD" Type="Double" />
+    <Property Name="BoxSizeL" Type="Double" />
+    <Property Name="BoxSizeW" Type="Double" />
+    <Property Name="BoxSizeD" Type="Double" />
+    <Property Name="GrossWeight" Type="Double" />
+    <Property Name="NetWeight" Type="Double" />
+    <Property Name="ImgUrl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QRCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FinishingName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShapeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AdditionalName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MaterialName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SizeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PriceSales" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="PriceSupplier" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Currency" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_ArtAdditional">
+    <End Role="Additionals" Type="Self.Additional" Multiplicity="0..1" />
+    <End Role="Articles" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Additionals">
+        <PropertyRef Name="AdditionalID" />
+      </Principal>
+      <Dependent Role="Articles">
+        <PropertyRef Name="AdditionalID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArtFinishing">
+    <End Role="Finishings" Type="Self.Finishing" Multiplicity="0..1" />
+    <End Role="Articles" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Finishings">
+        <PropertyRef Name="FinishingID" />
+      </Principal>
+      <Dependent Role="Articles">
+        <PropertyRef Name="FinishingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArtMaterial">
+    <End Role="Materials" Type="Self.Material" Multiplicity="0..1" />
+    <End Role="Articles" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Materials">
+        <PropertyRef Name="MaterialID" />
+      </Principal>
+      <Dependent Role="Articles">
+        <PropertyRef Name="MaterialID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArtShape">
+    <End Role="Shapes" Type="Self.Shape" Multiplicity="0..1" />
+    <End Role="Articles" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shapes">
+        <PropertyRef Name="ShapeID" />
+      </Principal>
+      <Dependent Role="Articles">
+        <PropertyRef Name="ShapeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArtSize">
+    <End Role="Sizes" Type="Self.Size" Multiplicity="0..1" />
+    <End Role="Articles" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sizes">
+        <PropertyRef Name="SizeID" />
+      </Principal>
+      <Dependent Role="Articles">
+        <PropertyRef Name="SizeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ArtType">
+    <End Role="Types" Type="Self.Type" Multiplicity="0..1" />
+    <End Role="Articles" Type="Self.Article" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Types">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="Articles">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="asiainspEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Additionals" EntityType="Self.Additional" />
+    <EntitySet Name="Articles" EntityType="Self.Article" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Finishings" EntityType="Self.Finishing" />
+    <EntitySet Name="Materials" EntityType="Self.Material" />
+    <EntitySet Name="Shapes" EntityType="Self.Shape" />
+    <EntitySet Name="Sizes" EntityType="Self.Size" />
+    <EntitySet Name="TestArticles" EntityType="Self.TestArticle" />
+    <EntitySet Name="Types" EntityType="Self.Type" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="vw_articles" EntityType="Self.vw_articles" />
+    <AssociationSet Name="FK_ArtAdditional" Association="Self.FK_ArtAdditional">
+      <End Role="Additionals" EntitySet="Additionals" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArtFinishing" Association="Self.FK_ArtFinishing">
+      <End Role="Finishings" EntitySet="Finishings" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArtMaterial" Association="Self.FK_ArtMaterial">
+      <End Role="Materials" EntitySet="Materials" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArtShape" Association="Self.FK_ArtShape">
+      <End Role="Shapes" EntitySet="Shapes" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArtSize" Association="Self.FK_ArtSize">
+      <End Role="Sizes" EntitySet="Sizes" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ArtType" Association="Self.FK_ArtType">
+      <End Role="Types" EntitySet="Types" />
+      <End Role="Articles" EntitySet="Articles" />
+    </AssociationSet>
+    <FunctionImport Name="sp_create_testArticle">
+      <Parameter Name="ArticleID" Mode="In" Type="String" />
+      <Parameter Name="MaterialNaam" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_insert_articles">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="SupplierCode" Mode="In" Type="String" />
+      <Parameter Name="TypeName" Mode="In" Type="String" />
+      <Parameter Name="MaterialName" Mode="In" Type="String" />
+      <Parameter Name="SizeName" Mode="In" Type="String" />
+      <Parameter Name="FinishingName" Mode="In" Type="String" />
+      <Parameter Name="AdditionalName" Mode="In" Type="String" />
+      <Parameter Name="ShapeName" Mode="In" Type="String" />
+      <Parameter Name="Description" Mode="In" Type="String" />
+      <Parameter Name="SizeL" Mode="In" Type="Double" />
+      <Parameter Name="SizeW" Mode="In" Type="Double" />
+      <Parameter Name="SizeD" Mode="In" Type="Double" />
+      <Parameter Name="BoxSizeL" Mode="In" Type="Double" />
+      <Parameter Name="BoxSizeW" Mode="In" Type="Double" />
+      <Parameter Name="BoxSizeD" Mode="In" Type="Double" />
+      <Parameter Name="GrossWeight" Mode="In" Type="Double" />
+      <Parameter Name="NetWeight" Mode="In" Type="Double" />
+      <Parameter Name="PriceSales" Mode="In" Type="Decimal" />
+      <Parameter Name="PriceSupplier" Mode="In" Type="Decimal" />
+      <Parameter Name="Currency" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Orders" EntityType="asiainspModel.Order" />
+    <AssociationSet Name="FK_Order_Supplier" Association="asiainspModel.FK_Order_Supplier">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Order1" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Orders_Cust" Association="asiainspModel.FK_Orders_Cust">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="Order1" EntitySet="Orders" />
+    </AssociationSet>
+    <EntitySet Name="Suppliers" EntityType="asiainspModel.Supplier" />
+    <AssociationSet Name="FK_Supplier" Association="asiainspModel.FK_Supplier">
+      <End Role="Supplier" EntitySet="Suppliers" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+    <Property Name="SupplierID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Orders1" Relationship="asiainspModel.FK_Order_Supplier" FromRole="Order" ToRole="Order1" />
+    <NavigationProperty Name="Order1" Relationship="asiainspModel.FK_Order_Supplier" FromRole="Order1" ToRole="Order" />
+    <NavigationProperty Name="Orders11" Relationship="asiainspModel.FK_Orders_Cust" FromRole="Order" ToRole="Order1" />
+    <NavigationProperty Name="Order2" Relationship="asiainspModel.FK_Orders_Cust" FromRole="Order1" ToRole="Order" />
+    <NavigationProperty Name="Supplier" Relationship="asiainspModel.FK_Supplier" FromRole="Order" ToRole="Supplier" />
+  </EntityType>
+  <Association Name="FK_Order_Supplier">
+    <End Type="asiainspModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="asiainspModel.Order" Role="Order1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="Order1">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Orders_Cust">
+    <End Type="asiainspModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="asiainspModel.Order" Role="Order1" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="Order1">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierCode" />
+    </Key>
+    <Property Name="SupplierCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="NameSupplier" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Significant" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NoKTP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonInCharge" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DistanceFromFactory" Type="Int32" />
+    <NavigationProperty Name="Orders" Relationship="asiainspModel.FK_Supplier" FromRole="Supplier" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK_Supplier">
+    <End Type="asiainspModel.Supplier" Role="Supplier" Multiplicity="0..1" />
+    <End Type="asiainspModel.Order" Role="Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplier">
+        <PropertyRef Name="SupplierCode" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

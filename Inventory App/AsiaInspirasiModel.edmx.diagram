@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cdb16d496594125938fa1b3cbc4011a" Name="Diagram1" ZoomLevel="81">
+        <EntityTypeShape EntityType="asiainspModel.Additional" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.Article" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.Customer" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.Finishing" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.Material" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.Shape" Width="1.5" PointX="0.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.Size" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.TestArticle" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.Type" Width="1.5" PointX="0.75" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.User" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="asiainspModel.vw_articles" Width="1.5" PointX="9.375" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="asiainspModel.FK_ArtAdditional" ManuallyRouted="false" />
+        <AssociationConnector Association="asiainspModel.FK_ArtFinishing" ManuallyRouted="false" />
+        <AssociationConnector Association="asiainspModel.FK_ArtMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="asiainspModel.FK_ArtShape" ManuallyRouted="false" />
+        <AssociationConnector Association="asiainspModel.FK_ArtSize" ManuallyRouted="false" />
+        <AssociationConnector Association="asiainspModel.FK_ArtType" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="asiainspModel.Order" Width="1.5" PointX="5" PointY="9.25" />
+        <AssociationConnector Association="asiainspModel.FK_Order_Supplier" />
+        <AssociationConnector Association="asiainspModel.FK_Orders_Cust" />
+        <EntityTypeShape EntityType="asiainspModel.Supplier" Width="1.5" PointX="2.75" PointY="19" />
+        <AssociationConnector Association="asiainspModel.FK_Supplier" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
